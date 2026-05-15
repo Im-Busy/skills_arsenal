@@ -1,0 +1,40 @@
+{
+    "name": "notebook-debug-session",
+    "description": "Template for debugging a failing notebook",
+    "workflow": {
+        "step1_execute": {
+            "command": "uv run papermill {notebook} {output} --log-output",
+            "purpose": "Execute notebook and capture errors",
+            "on_success": "goto step4_validate",
+            "on_failure": "goto step2_parse"
+        },
+        "step2_parse": {
+            "command": "uv run parse_errors.py {output} --json",
+            "purpose": "Extract structured error information",
+            "output": "error_json",
+            "next": "step3_locate"
+        },
+        "step3_locate": {
+            "actions": [
+                "Parse error_json to get cell_index and error_type",
+                "Read cell source: jq '.cells[{cell_index}].source' {notebook}",
+                "Analyze root cause based on error_type",
+                "Apply fix to cell source",
+                "Re-execute: goto step1_execute"
+            ],
+            "max_retries": 3
+        },
+        "step4_validate": {
+            "command": "uv run pytest tests/ -k {related_test} -v",
+            "purpose": "Validate fix doesn't break existing functionality",
+            "next": "complete"
+        }
+    },
+    "error_handlers": {
+        "ModuleNotFoundError": "uv add {module_name}",
+        "SyntaxError": "Fix syntax at indicated line",
+        "NameError": "Define variable or import before use",
+        "ImportError": "Check import path and module exports",
+        "FileNotFoundError": "Verify file path or create file"
+    }
+}

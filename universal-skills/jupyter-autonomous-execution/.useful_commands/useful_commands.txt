@@ -1,0 +1,187 @@
+## CATEGORY: Notebook Execution
+
+# Execute single notebook with papermill
+uv run papermill input.ipynb output.ipynb
+
+# Execute notebook with parameters
+uv run papermill input.ipynb output.ipynb -p param_name value
+
+# Validate notebook execution (in place)
+uv run jupyter nbconvert --to notebook --execute --inplace notebook.ipynb
+
+# Execute with custom timeout
+uv run jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=600 notebook.ipynb
+
+---
+
+## CATEGORY: Error Analysis
+
+# Parse errors from executed notebook (text output)
+uv run scripts/parse_errors.py executed.ipynb
+
+# Parse errors as JSON for programmatic use
+uv run scripts/parse_errors.py executed.ipynb --json
+
+# Get errors from specific cell
+uv run scripts/parse_errors.py executed.ipynb --cell 5
+
+# Include full traceback in output
+uv run scripts/parse_errors.py executed.ipynb --verbose
+
+---
+
+## CATEGORY: Batch Execution
+
+# Execute all notebooks in directory
+uv run scripts/batch_execute.py notebooks/*.ipynb --output report.json
+
+# Execute with output directory for executed notebooks
+uv run scripts/batch_execute.py notebooks/*.ipynb -d executed/
+
+# Print summary only
+uv run scripts/batch_execute.py notebooks/*.ipynb --summary
+
+# Custom timeout per notebook (in seconds)
+uv run scripts/batch_execute.py notebooks/*.ipynb --timeout 900
+
+---
+
+## CATEGORY: Cell Viewing & Comparison
+
+# View all code cells in notebook
+uv run scripts/view_cells.py notebook.ipynb
+
+# View specific cell by index
+uv run scripts/view_cells.py notebook.ipynb --cell 3
+
+# View multiple specific cells
+uv run scripts/view_cells.py notebook.ipynb --cell 1 --cell 5
+
+# Include cell outputs in view
+uv run scripts/view_cells.py notebook.ipynb --output
+
+# Compare two notebooks (show differences)
+uv run scripts/view_cells.py nb1.ipynb nb2.ipynb --diff
+
+# Output as JSON
+uv run scripts/view_cells.py notebook.ipynb --json
+
+---
+
+## CATEGORY: Search & Locate
+
+# Find notebooks by name pattern
+fd -e ipynb "pattern"
+
+# Search content across all notebooks
+rga "function_name" notebooks/
+
+# Find notebooks containing specific import
+rga "^import pandas|^from pandas" notebooks/
+
+# View notebook JSON structure
+jq '.cells[] | {type: .cell_type, source: .source[0:50]}' notebook.ipynb
+
+# Extract all code cells
+jq '.cells[] | select(.cell_type=="code") | .source' notebook.ipynb
+
+# Find cell containing specific code
+rga -A 5 "def my_function" notebook.ipynb
+
+---
+
+## CATEGORY: Debugging Loop
+
+# Step 1: Execute and capture errors
+uv run papermill notebook.ipynb output.ipynb 2> error.log || true
+
+# Step 2: Parse error to understand issue
+uv run scripts/parse_errors.py output.ipynb --json
+
+# Step 3: View problematic cell
+uv run scripts/view_cells.py output.ipynb --cell {cell_index}
+
+# Step 4: Apply fix (edit source)
+# Edit the notebook JSON or source file directly
+
+# Step 5: Re-execute to validate
+uv run papermill notebook.ipynb output.ipynb
+
+# Step 6: Run tests if applicable
+uv run pytest tests/test_module.py -v
+
+---
+
+## CATEGORY: Validation & Testing
+
+# Run all tests after fix
+uv run pytest tests/ -v
+
+# Run specific test file
+uv run pytest tests/test_notebook_outputs.py -v
+
+# Run with coverage
+uv run pytest --cov=src tests/
+
+# Validate notebook JSON structure
+jq '.' notebook.ipynb > /dev/null && echo "Valid JSON" || echo "Invalid JSON"
+
+---
+
+## CATEGORY: Environment Setup
+
+# Install core execution tools
+uv add papermill nbconvert nbformat nbclient
+
+# Install Jupyter kernel support
+uv add ipykernel jupyter
+
+# Register current environment as kernel
+uv run python -m ipykernel install --user --name project-env
+
+# List available kernels
+uv run jupyter kernelspec list
+
+# Verify papermill installation
+uv run papermill --version
+
+# Verify nbconvert installation
+uv run jupyter nbconvert --version
+
+---
+
+## CATEGORY: Quick Diagnostics
+
+# Check notebook kernel specification
+jq '.metadata.kernelspec' notebook.ipynb
+
+# List all execution counts
+jq '.cells[] | select(.cell_type=="code") | .execution_count' notebook.ipynb
+
+# Count cells by type
+jq 'group_by(.cell_type) | map({type: .[0].cell_type, count: length})' notebook.ipynb
+
+# Extract error cells only
+jq '.cells[] | select(.outputs[].output_type=="error")' notebook.ipynb
+
+# Get cell with most output
+jq '.cells | map(select(.cell_type=="code")) | max_by(.outputs | length)' notebook.ipynb
+
+---
+
+## CATEGORY: Troubleshooting
+
+# Kernel not found - reinstall kernel
+uv run python -m ipykernel install --user --name python3
+
+# Timeout during execution - increase timeout
+uv run jupyter nbconvert --execute --ExecutePreprocessor.timeout=1200 notebook.ipynb
+
+# Memory issues - clear outputs before re-execution
+jq '.cells[].outputs = [] | .cells[].execution_count = null' notebook.ipynb > cleaned.ipynb
+
+# Fix execution order issues - reset all counts
+jq '.cells[].execution_count = null' notebook.ipynb > reset.ipynb
+
+# Convert to script for easier debugging
+uv run jupyter nbconvert --to script notebook.ipynb

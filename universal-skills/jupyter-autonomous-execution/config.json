@@ -1,0 +1,29 @@
+{
+  "enabled": false,
+  "auto_execute_on_error": true,
+  "max_retry_iterations": 5,
+  "timeout_per_execution": 600,
+  "allowed_notebook_patterns": [
+    "**/*.ipynb"
+  ],
+  "excluded_notebook_patterns": [
+    "**/archive/*.ipynb",
+    "**/temp/*.ipynb"
+  ],
+  "auto_fix_patterns": {
+    "ModuleNotFoundError": "install_package",
+    "NameError": "check_definition",
+    "SyntaxError": "fix_syntax",
+    "FileNotFoundError": "check_path"
+  },
+  "reporting": {
+    "log_all_executions": true,
+    "save_error_reports": true,
+    "output_directory": ".jupyter-execution-logs"
+  },
+  "safety": {
+    "require_confirmation_for_package_install": true,
+    "max_concurrent_executions": 1,
+    "block_network_access": true
+  }
+}
