@@ -1,12 +1,54 @@
 # Skills Catalog — Complete Index
 
-> 68 agent skills across 2 categories: 21 universal + 37 domain-specific (6 disciplines).
+> 92 agent skills across 2 categories: 46 universal + 46 domain-specific (7 disciplines).
 
 ---
 
 ## Universal Skills
 
-Broadly applicable to any agentic project — research, thought, memory, tooling, search, communication.
+### AI Coding Dictionary (1 — NEW from C:\Dev\useful_repos\dictionary-of-ai-coding)
+
+| Skill | Description |
+|-------|-------------|
+| **ai-coding-dictionary** | 62-term glossary of AI coding vocabulary by Matt Pocock: models, sessions, context windows, tools, failure modes, handoffs, memory, and work patterns |
+
+### Agent-Skills Lifecycle (23 — NEW from C:\Dev\useful_repos\agent-skills)
+
+Software engineering lifecycle skills encoding Google's engineering culture, by Addy Osmani:
+
+| Skill | Description |
+|-------|-------------|
+| **agent-skills-api-and-interface-design** | Contract-first API design, versioning, error handling, backward compatibility |
+| **agent-skills-browser-testing-with-devtools** | Chrome DevTools-driven testing: console, network, performance, accessibility audits |
+| **agent-skills-ci-cd-and-automation** | GitHub Actions pipelines, Docker builds, pre-commit hooks, semantic versioning |
+| **agent-skills-code-review-and-quality** | Systematic code review with anti-rationalization tables, evidence gates, red flags |
+| **agent-skills-code-simplification** | Refactoring: extract method, reduce nesting, eliminate duplication, simplify conditionals |
+| **agent-skills-context-engineering** | AI agent context management: chunking, summarization, progressive disclosure |
+| **agent-skills-debugging-and-error-recovery** | Structured debugging: reproduce, isolate, root-cause, fix, regression-test |
+| **agent-skills-deprecation-and-migration** | Safe deprecation: notices, migration paths, removal timelines |
+| **agent-skills-documentation-and-adrs** | Architecture Decision Records, API docs, README standards |
+| **agent-skills-doubt-driven-development** | Explicit uncertainty tracking: flag unknowns, resolve before shipping |
+| **agent-skills-frontend-ui-engineering** | Component architecture, design systems, WCAG 2.1 AA, responsive layouts |
+| **agent-skills-git-workflow-and-versioning** | Branching strategies, conventional commits, PR workflows |
+| **agent-skills-idea-refine** | Structured idea refinement: criteria, frameworks, examples |
+| **agent-skills-incremental-implementation** | Build in small verified steps: each step compiles + passes tests |
+| **agent-skills-interview-me** | Agent self-interview to surface hidden assumptions and gaps |
+| **agent-skills-performance-optimization** | Core Web Vitals, bundle analysis, lazy loading, caching strategies |
+| **agent-skills-planning-and-task-breakdown** | Work breakdown structures, dependency graphs, MoSCoW prioritization |
+| **agent-skills-security-and-hardening** | OWASP Top 10, dependency scanning, secrets management, CSP headers |
+| **agent-skills-shipping-and-launch** | Launch checklists, feature flags, canary deployments, rollback plans |
+| **agent-skills-source-driven-development** | Reading source code to understand behavior before writing |
+| **agent-skills-spec-driven-development** | Specification-first: write spec → validate → implement → verify |
+| **agent-skills-test-driven-development** | Red-Green-Refactor, test pyramids, mocking, coverage thresholds |
+| **agent-skills-using-agent-skills** | Meta-skill: how to discover, activate, and compose skills |
+
+### Multi-Platform Skill Engineering (1 — NEW from C:\Dev\useful_repos\planning-with-files)
+
+| Skill | Description |
+|-------|-------------|
+| **multi-platform-skill-design** | Agent-executable skill that provisions cross-IDE compatibility: detects canonical skill directories, generates sync automation with SHA-256 drift prevention, creates 12+ platform mirrors, and injects cross-platform governance into AGENTS.md. Covers Kilo, Claude Code, Cursor, OpenCode, Codex, Gemini CLI, and 30+ platforms following the planning-with-files canonical-source architecture |
+
+### Original Universal Skills (21)
 
 | Skill | Description |
 |-------|------------|
@@ -100,6 +142,12 @@ Broadly applicable to any agentic project — research, thought, memory, tooling
 |-------|------------|
 | **networkx** | Complex network/graph toolkit: Graph/DiGraph/MultiGraph, shortest paths, centrality, community detection, synthetic graph generators, visualization |
 
+### Developer Tooling (1 skill — NEW from C:\Dev\useful_repos\CLI-Anything)
+
+| Skill | Description |
+|-------|------------|
+| **cli-anything** | Auto-generate agent-friendly CLI harnesses for any software via 7-phase pipeline (Analyze→Design→Implement→Test→Document→Publish). 40+ community CLIs (Blender, GIMP, Zotero, Obsidian, ComfyUI, Draw.io, Ollama, n8n). CLI-Hub meta-skill for agent-autonomous CLI discovery. |
+
 ---
 
 ## Skill Synergy Map
@@ -129,7 +177,16 @@ LLM Agent Stack (domain-specific):
   + litgpt/mamba + axolotl/unsloth/peft for training
   + dspy for prompt optimization + speculative-decoding for inference
 
+Agent Vocabulary (universal):
+  ai-coding-dictionary → precise language for agent/harness/session/tool concepts
+
 Engineering Foundation (universal):
   cli-tools + jupyter-autonomous-execution + dual-repo-sync
   + ui-ux-pro-max + awesome-design-systems + cpp-msys2
+  + agent-skills-* (spec→plan→build→test→review→ship lifecycle)
+  + multi-platform-skill-design (cross-IDE skill architecture)
+
+Developer Tooling:
+  cli-anything → auto-generate CLIs for any software
+  + agent-skills-ci-cd-and-automation + agent-skills-shipping-and-launch
 ```

@@ -2,11 +2,13 @@
 
 ## What This Is
 
-A curated collection of **68 AI agent skills** — self-contained instruction modules that teach AI coding assistants how to use specific tools, frameworks, and methodologies. Organized into two categories: **universal skills** (broadly applicable) and **domain-specific skills** (organized by discipline).
+A curated collection of **92 AI agent skills** — self-contained instruction modules that teach AI coding assistants how to use specific tools, frameworks, and methodologies. Organized into two categories: **universal skills** (broadly applicable) and **domain-specific skills** (organized by discipline).
+
+**Updated 2026-05-24:** +1 multi-platform-skill-design (8-pattern architecture for cross-IDE compatibility from planning-with-files). 91 → 92 total.
 
 ## Highlights
 
-### Universal Toolkit (21 skills)
+### Universal Toolkit (45 skills)
 
 Skills useful in virtually any agentic project:
 - **Research & Ideation**: 5 structured brainstorming/ideation/critical-thinking frameworks
@@ -18,6 +20,8 @@ Skills useful in virtually any agentic project:
 - **Jupyter Automation**: Headless notebook execution with automatic error detection and fix loops
 - **Design Intelligence**: 161 reasoning rules, 67 UI styles, 161 palettes, 57 font pairings
 - **LLM Observability**: LangSmith trace/debug/evaluate/monitor integration
+- **Agent Vocabulary**: 62-term AI coding dictionary — precise language for agents, harnesses, context, sessions, tools, failure modes, work patterns
+- **Skill Engineering**: Canonical-source architecture, per-IDE mirrors, dual .sh/.ps1 scripts, sync/bump automation, portable scripting — ship skills to 17+ AI coding platforms without drift
 
 ### Domain Depth (37 skills, 6 disciplines)
 
@@ -27,6 +31,12 @@ Skills useful in virtually any agentic project:
 - **Autonomous Research**: 2 two-loop research architectures + 15-stage DeepScientist research operating system
 - **Geospatial**: Remote sensing, GIS, satellite imagery analysis (500+ code examples)
 - **Scientific Computing**: Complex network/graph analysis toolkit
+- **Developer Tooling** (NEW): Auto-generate agent-friendly CLIs for any software + 40 community CLIs
+
+### New Additions (2026-05-16)
+- **23 agent-skills lifecycle skills** from Google engineering culture: spec→plan→build→test→review→ship pipeline
+- **1 CLI-Anything skill**: 7-phase CLI generation pipeline, 40+ community CLIs, CLI-Hub discovery
+- **1 AI Coding Dictionary**: 62-term glossary by Matt Pocock — models, sessions, tools, failure modes, handoffs, memory, work patterns
 
 ### External Skill Curation
 
@@ -40,11 +50,11 @@ Identified, evaluated, and curated the highest-value skills from:
 
 | Metric | Value |
 |--------|-------|
-| Total files | 564 |
-| SKILL.md instruction files | 68 |
-| Total size | 10.4 MB |
-| Universal skills | 21 |
-| Domain-specific disciplines | 6 |
+| Total files | ~600+ |
+| SKILL.md instruction files | 93 |
+| Total size | ~11.5 MB |
+| Universal skills | 46 |
+| Domain-specific disciplines | 7 |
 
 ## Organization Philosophy
 
@@ -56,7 +66,8 @@ domain-specific-skills/ → What a specialized agent masters
   ├── llm-engineering/
   ├── autonomous-research/
   ├── geospatial/
-  └── scientific-computing/
+  ├── scientific-computing/
+  └── developer-tooling/
 ```
 
 Skills aren't just documentation — they're **executable context** that transforms an AI agent from a generalist into a domain expert. Each skill decides when to activate, encodes workflows, prevents common errors, and provides deep references.
