@@ -1,7 +1,7 @@
 ---
 name: directed-document-research
 description: Search the web for PDFs and documents from authoritative sources on a given topic, batch download, convert to markdown for review, filter by relevance to the current task, keep only useful files in a project-relative research directory, delete the rest, and report findings. Use when the user asks to research a topic by finding and reviewing documents from trusted sources — academic papers, professional body publications, government reports, industry standards, white papers — for any domain.
-allowed-tools: Read Write Edit Bash(avily_tavily-search:*, tavily_tavily-extract:*, tavily_tavily-crawl:*, exa_web_search_exa:*, exa_web_fetch_exa:*, webfetch:*)
+allowed-tools: Read Write Edit Bash(tavily_tavily-search:*, ttavily_tavily-extract:*, ttavily_tavily-crawl:*, exa_web_search_exa:*, exa_web_fetch_exa:*, webfetch:*)
 license: MIT license
 metadata:
     skill-author: Kilo from joeychiu/reading-CFS-IS-BS
