@@ -4,7 +4,7 @@
 
 A curated collection of **96 AI agent skills** — self-contained instruction modules that teach AI coding assistants how to use specific tools, frameworks, and methodologies. Organized into two categories: **universal skills** (broadly applicable) and **domain-specific skills** (organized by discipline).
 
-**Updated 2026-06-02:** 47 universal + 35 domain-specific across 7 disciplines. 96 SKILL.md files total.
+**Updated 2026-06-02:** 48 universal + 35 domain-specific across 7 disciplines. 97 SKILL.md files total.
 
 ## Highlights
 
@@ -40,7 +40,10 @@ Skills useful in virtually any agentic project:
 - **1 CLI-Anything skill**: 7-phase CLI generation pipeline, 40+ community CLIs, CLI-Hub discovery
 - **1 AI Coding Dictionary**: 62-term glossary by Matt Pocock — models, sessions, tools, failure modes, handoffs, memory, work patterns
 
-### Recent Additions (2026-05-24)
+### Recent Additions (2026-06-02)
+- **1 directed-document-research**: 5-phase pipeline for web research → download → convert → filter → report. Searches authoritative sources, batch-downloads PDFs, converts to markdown, reviews for relevance, deletes irrelevant, and reports findings. Works for any domain.
+
+### Past Additions (2026-05-24)
 - **1 multi-platform-skill-design**: 8-pattern architecture for cross-IDE compatibility from planning-with-files
 
 ### External Skill Curation
@@ -60,9 +63,9 @@ Identified, evaluated, and curated the highest-value skills from:
 | Metric | Value |
 |--------|-------|
 | Total files | ~600+ |
-| SKILL.md instruction files | 96 |
+| SKILL.md instruction files | 97 |
 | Total size | ~11.5 MB |
-| Universal skills | 47 |
+| Universal skills | 48 |
 | Domain-specific skills | 35 |
 | Domain-specific disciplines | 7 |
 

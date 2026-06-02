@@ -1,6 +1,6 @@
 # Skills Catalog — Complete Index
 
-> 96 SKILL.md files across 2 categories: 47 universal + 49 domain-specific (7 disciplines).
+> 97 SKILL.md files across 2 categories: 48 universal + 49 domain-specific (7 disciplines).
 
 ---
 
@@ -54,6 +54,12 @@ Software engineering lifecycle skills encoding Google's engineering culture, by 
 |-------|-------------|
 | **dual-repo-setup** | Guides the agent to provision a dual-remote Git architecture for any project — private development repo (main/master) + curated public-facing mirror. Detects project structure, identifies private vs public files, creates whitelist, repo-syncer infrastructure, and gitignore exclusions |
 | **git-commit-push** | Safely commits and pushes current changes with dual-repo awareness. Auto-detects branch, stages files appropriately, commits with conventional message format, and pushes to the correct remote. Prevents pushing private branches to public remotes |
+
+### Document Research (1)
+
+| Skill | Description |
+|-------|-------------|
+| **directed-document-research** | 5-phase pipeline: search authoritative sources (professional bodies, government, Big4, academic) → batch-download PDFs → convert to markdown → filter by relevance → report findings. Deletes all irrelevant documents. Project-relative research directory. For any domain — from financial analysis to code review to scientific literature |
 
 ### Original Universal Skills (20)
 
