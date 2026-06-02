@@ -117,7 +117,6 @@ Each rule includes:
 
 ### Data Files
 
-All data files live in this skill directory and can be accessed directly:
-`C:\Dev\skills\ui-ux-pro-max\data\`
+All data files live in the `data/` subdirectory of this skill.
 
 For detailed design principles, UX guidelines, and anti-patterns, see `ux-guidelines.csv`.

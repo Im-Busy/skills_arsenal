@@ -120,4 +120,4 @@ Use this skill when:
 3. Follow the Do's and Don'tts strictly
 4. Use the Agent Prompt Guide section for quick reference prompts
 
-If the user wants the full DESIGN.md for any company, load it from: `C:\Dev\projects\albion_get_rich\cool_repos\awesome-design-md\design-md\{company-name}\`
+For the full DESIGN.md for any company, see the awesome-design-md repository on GitHub.

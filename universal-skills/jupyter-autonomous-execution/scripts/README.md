@@ -244,10 +244,10 @@ if not result["success"]:
 ### Script not found
 ```bash
 # Make sure you're running from skill directory
-cd C:\Dev\skills\jupyter-autonomous-execution
+cd path/to/jupyter-autonomous-execution
 
-# Or use full path
-uv run C:\Dev\skills\jupyter-autonomous-execution\scripts\execute_notebook.py ...
+# Or use relative path
+uv run scripts/execute_notebook.py ...
 ```
 
 ### Missing dependencies

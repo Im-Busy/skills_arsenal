@@ -1,0 +1,9 @@
+# VS Code workspace — contains local paths, not for distribution
+*.code-workspace
+
+# IDE / editor config
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

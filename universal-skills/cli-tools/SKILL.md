@@ -1,66 +1,11 @@
 ---
 name: cli-tools
-description: Comprehensive guide for all CLI tools available in the C:\Dev environment (jq, yq, fd, rg, rga, bat, pandoc, uv, delta, dust, gh, repomix, marker). Use when manipulating config files, searching for files or content, converting documents, managing Python environments, packing repositories for AI analysis, or converting PDFs/documents to markdown.
+description: Comprehensive guide for CLI tools commonly used in AI-assisted development (jq, yq, fd, rg, rga, bat, pandoc, uv, delta, dust, gh, repomix, marker). Use when manipulating config files, searching for files or content, converting documents, managing Python environments, packing repositories for AI analysis, or converting PDFs/documents to markdown.
 ---
 
 # CLI Tools Quick Reference Guide
 
-> For use by Kilo AI coding assistant
-> All tools installed via Scoop package manager unless noted
-
----
-
-## IMPORTANT: Auto-Update Instruction
-
-**To Kilo or any other coding agent:** If you discover a new CLI tool being used in this project or anywhere under `C:\Dev\` that is NOT documented in this file, you MUST add it here. Follow this process:
-
-1. Check if the tool is already installed (run `<tool> --version` or `where <tool>`)
-2. Identify what the tool does and its common usage patterns
-3. Add a new section for it in this file following the existing format
-4. Update the Tool Index table at the top with the new tool
-5. Update the Tool Selection Guide and Decision Tree at the bottom
-6. Commit the change with message: "docs: add <tool-name> to CLI tools guide"
-
-This ensures the guide stays current as new tools are adopted.
-
----
-
-## Scoop Package Management
-
-All CLI tools in this guide are installed via [Scoop](https://scoop.sh/). If any tool is missing or not working, use these commands:
-
-```bash
-# Check if a tool is installed
-scoop list <tool-name>
-
-# List all installed packages
-scoop list
-
-# Install a missing tool
-scoop install <tool-name>
-
-# Update all tools
-scoop update *
-
-# Update a specific tool
-scoop update <tool-name>
-
-# Check for outdated packages
-scoop status
-
-# Uninstall a tool
-scoop uninstall <tool-name>
-```
-
-### Package Names
-All tools use their default Scoop package names: `jq`, `yq`, `fd`, `rg`, `rga`, `bat`, `pandoc`, `uv`, `delta`, `dust`, `gh`, `repomix`. 
-
-**Note:** `marker` is installed via pip: `uv pip install marker-pdf`
-
-### Troubleshooting
-- If `scoop` itself is not found, it needs to be installed first: `irm get.scoop.sh | iex`
-- If a tool fails to run, try `scoop reset <tool-name>` to fix shims
-- Some tools may require additional buckets: `scoop bucket add extras` (for `rga`, `delta`, etc.)
+> Reference for CLI tools commonly used in AI coding assistant workflows
 
 ---
 
@@ -81,93 +26,6 @@ All tools use their default Scoop package names: `jq`, `yq`, `fd`, `rg`, `rga`, 
 | Low | `uv` | Python package management |
 | Low | `delta` | Pretty diffs |
 | Low | `dust` | Disk usage visualization |
-
----
-
-## marker — PDF/Document to Markdown Converter
-
-### What It Does
-Marker converts PDF, image, PPTX, DOCX, XLSX, HTML, and EPUB files to markdown, JSON, HTML, or chunks quickly and accurately. It formats tables, forms, equations, inline math, links, references, and code blocks, and can extract images. Outperforms Llamaparse, Mathpix, and Docling in benchmarks.
-
-### Installation
-```bash
-# Install via pip (use uv for speed)
-uv pip install marker-pdf
-
-# For non-PDF documents (PPTX, DOCX, XLSX, HTML, EPUB)
-uv pip install marker-pdf[full]
-```
-
-### Basic Usage
-```bash
-# Convert a single file
-marker_single /path/to/file.pdf
-
-# Convert a single file with options
-marker_single /path/to/file.pdf --output_format json --output_dir ./output
-
-# Convert multiple files
-marker_single /path/to/folder
-
-# Interactive GUI (requires streamlit)
-marker_gui
-```
-
-### Key Options
-```bash
---output_format [markdown|json|html|chunks]  # Output format (default: markdown)
---output_dir PATH                             # Output directory
---page_range TEXT                             # Pages to process, e.g. "0,5-10,20"
---use_llm                                     # Boost accuracy with LLM (requires API key)
---force_ocr                                   # Force OCR on all pages (for garbled text)
---disable_image_extraction                    # Don't extract images
---debug                                       # Enable debug mode with diagnostics
-```
-
-### LLM Integration
-Marker can use LLMs for higher accuracy (tables, forms, inline math):
-```bash
-# Set API key first
-export GOOGLE_API_KEY=your_key  # Or use --gemini_api_key
-
-# Run with LLM boost
-marker_single file.pdf --use_llm
-
-# Alternative LLM services
-marker_single file.pdf --use_llm --llm_service marker.services.openai.OpenAIService
-```
-
-### Python API
-```python
-from marker.converters.pdf import PdfConverter
-from marker.models import create_model_dict
-from marker.output import text_from_rendered
-
-converter = PdfConverter(artifact_dict=create_model_dict())
-rendered = converter("FILEPATH")
-text, _, images = text_from_rendered(rendered)
-```
-
-### When to Use marker
-
-| Scenario | Tool | Reason |
-|----------|------|--------|
-| Convert PDF to markdown | `marker` | Best accuracy, fast |
-| Convert PDF to JSON/HTML | `marker` | Structured output |
-| Extract tables from PDF | `marker` | Better than rga for tables |
-| Convert DOCX/PPTX to markdown | `marker` | Supports Office formats |
-| Convert for RAG/chunking | `marker` | Use `--output_format chunks` |
-| High-accuracy extraction | `marker --use_llm` | LLM boost for complex docs |
-| Search inside PDFs | `rga` | rga searches, marker converts |
-| Extract text from PDF | `rga` or `marker` | rga for search, marker for format |
-| Simple document conversion | `pandoc` | pandoc for basic conversion |
-| Convert PDF to PDF | N/A | Use PDF tools |
-
-### When NOT to Use marker
-- **Search PDF content** → Use `rga` instead (faster for search)
-- **Quick text extraction** → Use `rga` for simple searches
-- **Convert simple formats** → Use `pandoc` for basic conversions
-- **PDF to PDF operations** → Use `pdftk` or similar
 
 ---
 
@@ -273,6 +131,91 @@ docker run -v .:/app -it --rm ghcr.io/yamadashy/repomix path/to/directory
 # Remote repo with output directory
 docker run -v ./output:/app -it --rm ghcr.io/yamadashy/repomix --remote https://github.com/owner/repo
 ```
+
+---
+
+## marker — PDF/Document to Markdown Converter
+
+### What It Does
+Marker converts PDF, image, PPTX, DOCX, XLSX, HTML, and EPUB files to markdown, JSON, HTML, or chunks quickly and accurately. It formats tables, forms, equations, inline math, links, references, and code blocks, and can extract images. Outperforms Llamaparse, Mathpix, and Docling in benchmarks.
+
+### Installation
+```bash
+# Install via pip
+pip install marker-pdf
+
+# For non-PDF documents (PPTX, DOCX, XLSX, HTML, EPUB)
+pip install marker-pdf[full]
+```
+
+### Basic Usage
+```bash
+# Convert a single file
+marker_single /path/to/file.pdf
+
+# Convert a single file with options
+marker_single /path/to/file.pdf --output_format json --output_dir ./output
+
+# Convert multiple files
+marker_single /path/to/folder
+
+# Interactive GUI (requires streamlit)
+marker_gui
+```
+
+### Key Options
+```bash
+--output_format [markdown|json|html|chunks]  # Output format (default: markdown)
+--output_dir PATH                             # Output directory
+--page_range TEXT                             # Pages to process, e.g. "0,5-10,20"
+--use_llm                                     # Boost accuracy with LLM (requires API key)
+--force_ocr                                   # Force OCR on all pages (for garbled text)
+--disable_image_extraction                    # Don't extract images
+--debug                                       # Enable debug mode with diagnostics
+```
+
+### LLM Integration
+Marker can use LLMs for higher accuracy (tables, forms, inline math):
+```bash
+# Set API key first
+export GOOGLE_API_KEY=your_key  # Or use --gemini_api_key
+
+# Run with LLM boost
+marker_single file.pdf --use_llm
+
+# Alternative LLM services
+marker_single file.pdf --use_llm --llm_service marker.services.openai.OpenAIService
+```
+
+### Python API
+```python
+from marker.converters.pdf import PdfConverter
+from marker.models import create_model_dict
+from marker.output import text_from_rendered
+
+converter = PdfConverter(artifact_dict=create_model_dict())
+rendered = converter("FILEPATH")
+text, _, images = text_from_rendered(rendered)
+```
+
+### When to Use marker
+
+| Scenario | Tool | Reason |
+|----------|------|--------|
+| Convert PDF to markdown | `marker` | Best accuracy, fast |
+| Convert PDF to JSON/HTML | `marker` | Structured output |
+| Extract tables from PDF | `marker` | Better than rga for tables |
+| Convert DOCX/PPTX to markdown | `marker` | Supports Office formats |
+| Convert for RAG/chunking | `marker` | Use `--output_format chunks` |
+| High-accuracy extraction | `marker --use_llm` | LLM boost for complex docs |
+| Search inside PDFs | `rga` | rga searches, marker converts |
+| Extract text from PDF | `rga` or `marker` | rga for search, marker for format |
+| Simple document conversion | `pandoc` | pandoc for basic conversion |
+
+### When NOT to Use marker
+- **Search PDF content** → Use `rga` instead (faster for search)
+- **Quick text extraction** → Use `rga` for simple searches
+- **Convert simple formats** → Use `pandoc` for basic conversions
 
 ---
 
@@ -536,7 +479,7 @@ rga --rga-adapters=+mail "pattern"        # All + mail (enable disabled adapter)
 rga --rga-max-archive-recursion=3 "pattern"
 
 # Set custom cache path
-rga --rga-cache-path="D:\cache\rga" "pattern"
+rga --rga-cache-path="/tmp/rga-cache" "pattern"
 ```
 
 ### Common Use Cases
@@ -585,7 +528,7 @@ rga "pattern" backup.tar.gz
 5. **Default mode is fast** - Uses file extensions; `--rga-accurate` is slower
 
 ### Cache Location
-- Windows: `C:\Users\<username>\AppData\Local\ripgrep-all\cache`
+- Windows: `%LOCALAPPDATA%\ripgrep-all\cache`
 - Linux: `~/.cache/ripgrep-all`
 - macOS: `~/Library/Caches/ripgrep-all`
 

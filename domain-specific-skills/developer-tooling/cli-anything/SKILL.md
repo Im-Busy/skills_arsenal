@@ -3,7 +3,7 @@ name: cli-anything
 description: Auto-generate agent-friendly CLI harnesses for any software via 7-phase pipeline (Analyze→Design→Implement→Test→Document→Publish). 40+ community CLIs available (Blender, GIMP, Zotero, Obsidian, ComfyUI, Draw.io, Ollama, n8n). CLI-Hub meta-skill for agent-autonomous CLI discovery. Use when making any software agent-accessible via structured CLIs.
 version: 1.0.0
 author: CLI-Anything (Apache 2.0)
-source: C:\Dev\useful_repos\CLI-Anything
+source: https://github.com/CLI-Anything
 tags: [CLI, Python, Agent Tooling, Automation, Code Generation, Click]
 dependencies: [python>=3.10, click>=8.0, pytest]
 ---

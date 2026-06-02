@@ -6,20 +6,7 @@ version: 1.0
 
 # Jupyter Autonomous Execution & Debugging
 
-> For use by Kilo AI coding assistant
-> Enables autonomous execution of Jupyter notebooks and systematic debugging of errors across .ipynb and .py files
-
----
-
-## IMPORTANT: Auto-Update Instruction
-
-**To Kilo or any other coding agent:** If you discover new patterns, tools, or workflows for autonomous notebook execution and debugging, you MUST update this skill. Follow this process:
-
-1. Test the new approach in real scenarios
-2. Verify it works reliably
-3. Add documentation following the existing format
-4. Update the decision trees and integration sections
-5. Commit with message: "docs: add <feature> to jupyter-autonomous-execution skill"
+Automates execution of Jupyter notebooks and enables systematic debugging of errors across `.ipynb` and `.py` files.
 
 ---
 

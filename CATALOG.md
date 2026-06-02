@@ -1,18 +1,18 @@
 # Skills Catalog — Complete Index
 
-> 92 agent skills across 2 categories: 46 universal + 46 domain-specific (7 disciplines).
+> 96 SKILL.md files across 2 categories: 47 universal + 49 domain-specific (7 disciplines).
 
 ---
 
 ## Universal Skills
 
-### AI Coding Dictionary (1 — NEW from C:\Dev\useful_repos\dictionary-of-ai-coding)
+### AI Coding Dictionary (1)
 
 | Skill | Description |
 |-------|-------------|
 | **ai-coding-dictionary** | 62-term glossary of AI coding vocabulary by Matt Pocock: models, sessions, context windows, tools, failure modes, handoffs, memory, and work patterns |
 
-### Agent-Skills Lifecycle (23 — NEW from C:\Dev\useful_repos\agent-skills)
+### Agent-Skills Lifecycle (23)
 
 Software engineering lifecycle skills encoding Google's engineering culture, by Addy Osmani:
 
@@ -42,13 +42,20 @@ Software engineering lifecycle skills encoding Google's engineering culture, by 
 | **agent-skills-test-driven-development** | Red-Green-Refactor, test pyramids, mocking, coverage thresholds |
 | **agent-skills-using-agent-skills** | Meta-skill: how to discover, activate, and compose skills |
 
-### Multi-Platform Skill Engineering (1 — NEW from C:\Dev\useful_repos\planning-with-files)
+### Multi-Platform Skill Engineering (1)
 
 | Skill | Description |
 |-------|-------------|
 | **multi-platform-skill-design** | Agent-executable skill that provisions cross-IDE compatibility: detects canonical skill directories, generates sync automation with SHA-256 drift prevention, creates 12+ platform mirrors, and injects cross-platform governance into AGENTS.md. Covers Kilo, Claude Code, Cursor, OpenCode, Codex, Gemini CLI, and 30+ platforms following the planning-with-files canonical-source architecture |
 
-### Original Universal Skills (21)
+### Git & Repo Management (2 — project-built)
+
+| Skill | Description |
+|-------|-------------|
+| **dual-repo-setup** | Guides the agent to provision a dual-remote Git architecture for any project — private development repo (main/master) + curated public-facing mirror. Detects project structure, identifies private vs public files, creates whitelist, repo-syncer infrastructure, and gitignore exclusions |
+| **git-commit-push** | Safely commits and pushes current changes with dual-repo awareness. Auto-detects branch, stages files appropriately, commits with conventional message format, and pushes to the correct remote. Prevents pushing private branches to public remotes |
+
+### Original Universal Skills (20)
 
 | Skill | Description |
 |-------|------------|
@@ -65,8 +72,7 @@ Software engineering lifecycle skills encoding Google's engineering culture, by 
 | **market-research-reports** | Generates 50+ page consulting-grade market research reports (Porter Five Forces, PESTLE, SWOT, TAM/SAM/SOM, BCG Matrix) |
 | **database-lookup** | Unified access to 78+ public scientific/biomedical/economic databases via REST APIs (FRED, PubChem, NASA, SEC EDGAR, etc.) |
 | **mcp-search-strategy** | Decision framework for selecting optimal MCP search tools (Exa, Tavily, SearXNG, Context7, GitHub, Firecrawl) based on query type |
-| **cli-tools** | Quick reference for CLI environment: jq (JSON), yq (YAML/XML), fd (fast find), rg (content search), bat, pandoc, uv, delta, gh, repomix |
-| **cli-tools-global** | Extended CLI tool reference for the global C:\Dev environment (global variant) |
+| **cli-tools** | Comprehensive reference for CLI tools commonly used in AI-assisted development: jq (JSON), yq (YAML/XML), fd (fast find), rg (content search), rga (archive/PDF search), bat (syntax viewing), pandoc (document conversion), uv (Python), delta (diffs), dust (disk usage), gh (GitHub), repomix, marker (PDF→markdown) |
 | **jupyter-autonomous-execution** | Autonomous headless Jupyter notebook execution: error parsing, cross-file debugging, iterative fix-and-retry loops |
 | **cpp-msys2** | C++ development on Windows using MSYS2/MinGW-w64: g++ compilation, CMake, Make, GDB debugging, VS Code integration |
 | **dual-repo-sync** | Dual-remote Git architecture: syncs curated non-sensitive files from private dev repo to public repo, handles merge safety, leak prevention |
@@ -142,7 +148,7 @@ Software engineering lifecycle skills encoding Google's engineering culture, by 
 |-------|------------|
 | **networkx** | Complex network/graph toolkit: Graph/DiGraph/MultiGraph, shortest paths, centrality, community detection, synthetic graph generators, visualization |
 
-### Developer Tooling (1 skill — NEW from C:\Dev\useful_repos\CLI-Anything)
+### Developer Tooling (1 skill)
 
 | Skill | Description |
 |-------|------------|
