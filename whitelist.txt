@@ -1,0 +1,14 @@
+# Whitelist for public repo sync
+# skills_arsenal — private development → public mirror
+
+# === Public Content (the product) ===
+domain-specific-skills/
+universal-skills/
+
+# === Public Documentation ===
+README.md
+CATALOG.md
+SUMMARY.md
+
+# === Public Config ===
+.gitignore
