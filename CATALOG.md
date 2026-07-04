@@ -1,6 +1,6 @@
 # Skills Catalog — Complete Index
 
-> 97 SKILL.md files across 2 categories: 48 universal + 49 domain-specific (7 disciplines).
+> 98 SKILL.md files across 2 categories: 49 universal + 49 domain-specific (7 disciplines).
 
 ---
 
@@ -84,6 +84,7 @@ Software engineering lifecycle skills encoding Google's engineering culture, by 
 | **dual-repo-sync** | Dual-remote Git architecture: syncs curated non-sensitive files from private dev repo to public repo, handles merge safety, leak prevention |
 | **ui-ux-pro-max** | AI-powered design intelligence: 161 reasoning rules, 67 UI styles, 161 color palettes, 57 font pairings, 25 chart types, 99 UX guidelines |
 | **awesome-design-systems** | Curated collection of 59+ DESIGN.md files from real companies (Stripe, Linear, Apple, Tesla, Notion) defining visual themes and component styling |
+| **mermaid-authoring** | Definitive Mermaid syntax rules validated against official mermaid-js parser tests: subgraph syntax, style directives, node shapes, edge types, label quoting, GitHub rendering limitations, frontmatter config |
 | **langsmith** | LLM observability platform: trace, debug, evaluate, and monitor LLM applications in production |
 
 ---

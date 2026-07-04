@@ -2,13 +2,13 @@
 
 ## What This Is
 
-A curated collection of **96 AI agent skills** — self-contained instruction modules that teach AI coding assistants how to use specific tools, frameworks, and methodologies. Organized into two categories: **universal skills** (broadly applicable) and **domain-specific skills** (organized by discipline).
+A curated collection of **98 AI agent skills** — self-contained instruction modules that teach AI coding assistants how to use specific tools, frameworks, and methodologies. Organized into two categories: **universal skills** (broadly applicable) and **domain-specific skills** (organized by discipline).
 
-**Updated 2026-06-02:** 48 universal + 35 domain-specific across 7 disciplines. 97 SKILL.md files total.
+**Updated 2026-07-04:** 49 universal + 49 domain-specific across 7 disciplines. 98 SKILL.md files total.
 
 ## Highlights
 
-### Universal Toolkit (47 skills)
+### Universal Toolkit (48 skills)
 
 Skills useful in virtually any agentic project:
 - **Development Lifecycle**: 23 agent-skills covering the full spec→plan→build→test→review→ship pipeline (Google engineering culture, Addy Osmani)
@@ -22,6 +22,7 @@ Skills useful in virtually any agentic project:
 - **Git & Repo Management**: Dual-remote Git architecture setup, sync, and safe commit/push workflows
 - **Design Intelligence**: 161 reasoning rules, 67 UI styles, 161 palettes, 57 font pairings
 - **LLM Observability**: LangSmith trace/debug/evaluate/monitor integration
+- **Mermaid Authoring**: Definitive syntax rules validated against official parser tests — subgraphs, styling, breakers, GitHub rendering limitations
 - **Agent Vocabulary**: 62-term AI coding dictionary — precise language for agents, harnesses, context, sessions, tools, failure modes, work patterns
 - **Skill Engineering**: Canonical-source architecture, per-IDE mirrors, dual .sh/.ps1 scripts, sync/bump automation, portable scripting — ship skills to 17+ AI coding platforms without drift
 
