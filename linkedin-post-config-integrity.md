@@ -2,25 +2,42 @@
 
 ## Post Content
 
-My MCP servers crashed every restart. 13 orphaned node processes held ports hostage. Took 3 hours to find out why.
+Can a solo developer prevent all configuration drift bugs with a single skill?
 
-Turns out I had 4 different config drift bugs layered on top of each other.
+That question pushed me into one of the most frustrating debugging sessions I've had in months.
 
-**Bug 1: Port mismatch.** Docker-compose mapped port 8082 for SearXNG. But 12 source files still defaulted to 8080. Every search call hit a dead Swagger UI service instead of SearXNG.
+For the last few weeks, I've been building a unified MCP (Model Context Protocol) infrastructure — 14 services, Docker containers, process orchestration, the whole stack. Everything worked until I restarted. Then everything broke.
 
-**Bug 2: Ghost env var.** The README said "set SEARXNG_URL to override the default." The code never read that env var. Users who followed the docs got zero effect.
+Before writing a single line of code to fix it, I spent hours trying to understand why my servers kept crashing on restart. Not because the code was wrong, but because the configuration was wrong — in 4 different places, all at once.
 
-**Bug 3: Stale distribution configs.** 7 MCP config files in the distribution folder still pointed to the old port. I fixed the source code, forgot the configs.
+The biggest challenge wasn't debugging.
+It was understanding that config drift is invisible until it explodes.
 
-**Bug 4: Doc-code divergence.** The docker.md said "SearXNG starts at localhost:8080." The docker-compose.yml said 8082. Both were "correct" depending on which file you believed.
+Every feature introduced a new configuration surface. Docker-compose files, source code defaults, distribution configs, documentation — each one could drift from the others. Some bugs were obvious (EADDRINUSE). Some were silent (env vars documented but never read). Some were contradictory (docker.md said port 8080, docker-compose said 8082).
 
-I built a config-integrity skill that catches all 4 classes. It cross-references docker-compose.yml against code defaults, distribution configs, documentation, and the port registry. Every mismatch gets flagged with file, line, expected value, actual value, and severity.
+Packaging the skill for reuse, documenting the 4 bug classes, making it work across any project — that ended up taking almost as much effort as finding the bugs themselves.
 
-The skill runs before any config-adjacent commit. Catches drift at the source.
+The result is config-integrity, a skill that catches all 4 classes of configuration drift:
+
+✅ Port Mismatch — docker-compose vs code defaults
+✅ Ghost Env Vars — documented but never implemented
+✅ Stale Distribution Configs — source fixed, configs forgot
+✅ Doc-Code Divergence — docs say one thing, code says another
+
+This project taught me that writing code is only one part of engineering.
+Configuration, documentation, and consistency are equally important.
+A single file saying 8080 while another says 8082 can crash your entire infrastructure.
+
+This is only Version 1.
+I'm excited to continue improving it and learning more about preventing config drift at scale.
+
+If you've dealt with configuration drift in your own projects, I'd genuinely love to hear your stories in the comments. What bugs have you found? How did you fix them? I'm interested in patterns I haven't thought of yet.
+
+Feedback is always welcome.
 
 Available in the skills_arsenal collection: github.com/Im-Busy/skills_arsenal
 
-Config drift is the silent killer of infrastructure. One file says 8080, another says 8082, and your server crashes with EADDRINUSE. The skill makes these contradictions visible before they hit production.
+#config #infrastructure #devops #automation #python #mcp #skills #engineering
 
 ---
 
