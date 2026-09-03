@@ -3,6 +3,9 @@ name: creative-thinking-for-research
 description: Applies cognitive science frameworks for creative thinking to CS and AI research ideation. Use when seeking genuinely novel research directions by leveraging combinatorial creativity, analogical reasoning, constraint manipulation, and other empirically grounded creative strategies.
 version: 1.0.0
 author: Orchestra Research
+metadata:
+  invocation_posture: manual-first
+---
 license: MIT
 tags: [Creative Thinking, Research Ideation, Analogical Reasoning, Problem Reformulation, Cognitive Science]
 dependencies: []

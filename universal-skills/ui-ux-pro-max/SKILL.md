@@ -1,7 +1,10 @@
 ---
 name: ui-ux-pro-max
 description: AI-powered design intelligence toolkit with 161 reasoning rules, 67 UI styles, 161 color palettes, 57 font pairings, 25 chart types, 99 UX guidelines, and 15 tech stacks. Use when building ANY UI component, page, app, or dashboard. Automatically generates complete design systems from requirements.
-version: 2.0
+version: 2.0.0
+metadata:
+  invocation_posture: reference
+---
 ---
 
 # UI UX Pro Max Skill

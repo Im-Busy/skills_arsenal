@@ -1,8 +1,11 @@
 ---
 name: git-commit-push
 description: Safely commits and pushes current changes with dual-repo awareness. Auto-detects branch, stages files appropriately, commits with conventional message format, and pushes to the correct remote. Prevents pushing private branches to public remotes. Works with both single-remote and dual-remote architectures.
+version: 0.1.0
 license: MIT
 metadata:
+  invocation_posture: auto-first
+---
     skill-author: project
 ---
 

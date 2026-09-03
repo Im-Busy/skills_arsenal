@@ -1,7 +1,10 @@
 ---
 name: jupyter-autonomous-execution
 description: Autonomous Jupyter notebook execution, error analysis, and systematic debugging across notebooks and Python modules
-version: 1.0
+version: 1.0.0
+metadata:
+  invocation_posture: manual-first
+---
 ---
 
 # Jupyter Autonomous Execution & Debugging

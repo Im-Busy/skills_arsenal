@@ -1,3 +1,11 @@
+---
+name: knowledge-graph
+description: Cross-references research papers against project modules and maintains a knowledge graph. Use when papers are added to the project, when the user requests cross-references or knowledge insights, or when evaluating alignment between research and implementation.
+version: 0.1.0
+metadata:
+  invocation_posture: hybrid
+---
+
 # Skill: Knowledge Graph — Paper → Module Cross-Reference Engine
 
 > **CRITICAL**: This skill MUST be loaded and executed whenever new papers are added to `useful_resources/papers/` or when new PDFs are converted to markdown in `useful_resources/papers_md/`.

@@ -1,9 +1,12 @@
 ---
 name: multi-platform-skill-design
-description: Use when the user asks to make a project's skills or agent instructions work across multiple AI coding platforms (Kilo, Claude Code, Cursor, OpenCode, Codex, Gemini CLI, etc.). Provisions canonical-source architecture, per-platform SKILL.md mirrors, sync automation, and drift prevention. Use when refactoring a skill to support 3+ platforms, or setting up cross-IDE compatibility for a project.
+description: Use when the user asks to make a project's skills or agent instructions work across multiple supported AI coding platforms (Codex, OpenCode, Claude Code, Cursor, Gemini CLI, etc.). Provisions canonical-source architecture, per-platform SKILL.md mirrors, sync automation, and drift prevention. Use when refactoring a skill to support 3+ platforms, or setting up cross-IDE compatibility for a project. Do NOT create or restore Kilo configuration or mirrors.
+version: 0.1.0
 allowed-tools: Read Write Edit Bash Glob Grep
 license: MIT
 metadata:
+  invocation_posture: manual-first
+---
   skill-author: project
 ---
 
@@ -26,7 +29,6 @@ Activate this skill when the user:
 Examine the project to understand what exists:
 
 1. Find the canonical skill directory. Common patterns:
-   - `.kilo/skills/` (Kilo project)
    - `.claude/skills/` (Claude Code project)
    - `skills/` at repo root (generic)
    - If none exists, ask which platform is the primary one and what skills exist
@@ -44,7 +46,6 @@ The canonical directory is the single source of truth. All other platforms are m
 
 | Situation | Canonical |
 |-----------|-----------|
-| Project already uses Kilo | `.kilo/skills/` |
 | Project already uses Claude Code | `.claude/skills/` |
 | Multi-platform from scratch | `skills/` at repo root |
 | User specifies a preference | Whatever they say |
@@ -74,7 +75,7 @@ import sys
 import hashlib
 from pathlib import Path
 
-CANONICAL = Path("<CANONICAL_DIR>")  # e.g. ".kilo/skills" or "skills"
+CANONICAL = Path("<CANONICAL_DIR>")  # e.g. ".claude/skills" or "skills"
 
 # List every subdirectory that contains a SKILL.md
 SKILL_DIRS = [
@@ -224,7 +225,7 @@ if __name__ == "__main__":
 
 Fill in `CANONICAL` and `SKILL_DIRS` from the Phase 1 findings. Example:
 ```python
-CANONICAL = Path(".kilo/skills")
+CANONICAL = Path("skills")
 SKILL_DIRS = ["my-skill", "another-skill", "toolkit"]
 ```
 
@@ -259,7 +260,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 PLATFORM_DIRS = [
-    ".kilo", ".claude", ".codebuddy", ".codex", ".continue",
+    ".claude", ".codebuddy", ".codex", ".continue",
     ".cursor", ".factory", ".gemini", ".hermes", ".kiro",
     ".mastracode", ".opencode", ".pi",
 ]
@@ -343,7 +344,7 @@ def main(argv=None):
             changed += 1
             print(f"  bumped: {rel}  {old} -> {new}")
 
-    for json_file in ["kilo.json", "opencode.json"]:
+    for json_file in ["opencode.json"]:
         p = REPO_ROOT / json_file
         if p.exists():
             old, err = bump_json(p, new, dry_run=args.dry_run)
@@ -401,7 +402,7 @@ ls -d .*/skills/ 2>/dev/null
 Report the final state:
 ```
 Multi-platform architecture provisioned:
-  Canonical: .kilo/skills/ (11 skills)
+  Canonical: skills/
   Mirrors:   .claude/, .codebuddy/, .codex/, .continue/, .cursor/,
              .factory/, .gemini/, .hermes/, .kiro/, .mastracode/,
              .opencode/, .pi/
@@ -415,7 +416,7 @@ Multi-platform architecture provisioned:
 - **Run sync after every skill edit.** `python scripts/sync-platforms.py && python scripts/sync-platforms.py --verify`
 - **Never edit mirror files directly.** They get overwritten by the next sync.
 - **The canonical directory stays in the project as-is.** Don't rename it to `skills/` just to match a pattern — use whatever the project already has.
-- **If the user's platform is missing from PLATFORM_MANIFESTS, add it.** The 12 listed cover Kilo, Claude Code, Cursor, OpenCode, Codex, CodeBuddy, FactoryAI, Gemini CLI, Hermes, Kiro, Mastra Code, Continue.dev, and Pi Agent. If the user mentions another platform (Cline, Roo Code, Augment Code, GitHub Copilot, Windsurf, BoxLite, AdaL, Antigravity, OpenClaw), add it to the manifest.
+- **If the user's supported platform is missing from PLATFORM_MANIFESTS, add it.** Kilo is retired and must never be added. Other platforms require an explicit user request and a verified discovery path.
 
 ## Platform Skill Path Reference
 
@@ -423,7 +424,6 @@ When writing AGENTS.md sections or docs, use these platform-appropriate paths:
 
 | Platform | Skill Path | Discovery Mechanism |
 |----------|-----------|-------------------|
-| Kilo | `.kilo/skills/<name>/SKILL.md` | Auto-loads from `.kilo/skills/` |
 | Claude Code | `.claude/skills/<name>/SKILL.md` | Auto-loads from `.claude/skills/` |
 | Cursor | `.cursor/skills/<name>/SKILL.md` | Skills system + optional hooks.json |
 | OpenCode | `.opencode/skills/<name>/SKILL.md` | Skills or oh-my-opencode plugin |

@@ -1,8 +1,11 @@
 ---
 name: dual-repo-setup
 description: Guides the agent to provision a dual-remote Git architecture for any project — private development repo (main/master) + curated public-facing mirror (public branch). Detects project structure, identifies private vs public files, creates whitelist, repo-syncer infrastructure, and gitignore exclusions. Use when user wants to publish a curated subset of a private repo without leaking secrets, IDE configs, internal docs, or agent memory.
+version: 0.1.0
 license: MIT
 metadata:
+  invocation_posture: manual-first
+---
     skill-author: project
 ---
 

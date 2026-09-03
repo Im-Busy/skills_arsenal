@@ -1,6 +1,9 @@
 ---
 name: mcp-search-strategy
 description: Guides selection of the optimal MCP search tool (Exa, Tavily, SearXNG, Context7, GitHub, Memory, Firecrawl) and CLI tools (Repomix) based on query type, content needs, and reliability requirements. Provides decision trees, tool-specific parameter guidance, and fallback strategies for web research, code discovery, and information retrieval tasks.
+version: 0.1.0
+metadata:
+  invocation_posture: reference
 ---
 
 # MCP Search Tool Selection Strategy

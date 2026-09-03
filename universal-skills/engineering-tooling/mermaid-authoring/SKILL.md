@@ -2,15 +2,17 @@
 name: mermaid-authoring
 description: MUST USE for ANY Mermaid diagram — flowcharts, architecture, sequences, class, state, ER, Gantt, pie, gitgraph. Covers syntax rules validated against official mermaid-js repo parser tests, GitHub rendering limitations, subgraph/styling gotchas, and exact syntax that breaks. Activates on: mermaid, flowchart, architecture diagram, graph TD/LR/TB, sequenceDiagram, classDiagram, stateDiagram, gantt, pie, gitGraph, subgraph, style directive, classDef, linkStyle.
 version: 1.0.0
+metadata:
+  invocation_posture: reference
 ---
 
 # Mermaid Authoring — Definite Syntax Rules
 
-> Built from the official mermaid-js repository (`C:\Dev\useful_repos\04-agent-tools\mermaid\`), parser test files, and GitHub rendering analysis. Every rule below is traceable to a test fixture, parser spec, or source file.
-
+> Built from the official mermaid-js repository, parser test files, and GitHub rendering analysis. Every rule below is traceable to a test fixture, parser spec, or source file. Clone the upstream repo for reference: `git clone https://github.com/mermaid-js/mermaid.git`
+>
 ## CRITICAL FIRST
 
-Before writing ANY Mermaid diagram, read the rules below. If you encounter a situation not covered here, study the source repo at `C:\Dev\useful_repos\04-agent-tools\mermaid\`. Key reference files:
+Before writing ANY Mermaid diagram, read the rules below. If you encounter a situation not covered here, clone the upstream mermaid-js repo and study the relevant source files. Key reference files:
 
 - `packages/mermaid/src/docs/syntax/flowchart.md` — Canonical flowchart syntax
 - `packages/mermaid/src/diagrams/flowchart/parser/flow-text.spec.js` — What breaks
@@ -337,7 +339,7 @@ flowchart LR
 
 ## 11. When Unsure — Read the Source
 
-The official mermaid-js repo is at `C:\Dev\useful_repos\04-agent-tools\mermaid\`. For any syntax question not covered here:
+When you encounter a Mermaid syntax question not covered here, clone the upstream mermaid-js repo and consult these key files:
 
 1. `packages/mermaid/src/docs/syntax/flowchart.md` — canonical reference
 2. `packages/mermaid/src/diagrams/flowchart/parser/flow-text.spec.js` — edge cases

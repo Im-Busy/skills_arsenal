@@ -1,6 +1,9 @@
 ---
 name: security-and-hardening
 description: Hardens code against vulnerabilities. Use when handling user input, authentication, data storage, or external integrations. Use when building any feature that accepts untrusted data, manages user sessions, or interacts with third-party services.
+version: 0.1.0
+metadata:
+  invocation_posture: manual-first
 ---
 
 # Security and Hardening

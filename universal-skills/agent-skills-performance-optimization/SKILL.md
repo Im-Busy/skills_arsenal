@@ -1,6 +1,9 @@
 ---
 name: performance-optimization
 description: Optimizes application performance. Use when performance requirements exist, when you suspect performance regressions, or when Core Web Vitals or load times need improvement. Use when profiling reveals bottlenecks that need fixing.
+version: 0.1.0
+metadata:
+  invocation_posture: manual-first
 ---
 
 # Performance Optimization

@@ -1,6 +1,9 @@
 ---
 name: cli-tools
 description: Comprehensive guide for CLI tools commonly used in AI-assisted development (jq, yq, fd, rg, rga, bat, pandoc, uv, delta, dust, gh, repomix, marker). Use when manipulating config files, searching for files or content, converting documents, managing Python environments, packing repositories for AI analysis, or converting PDFs/documents to markdown.
+version: 0.1.0
+metadata:
+  invocation_posture: reference
 ---
 
 # CLI Tools Quick Reference Guide

@@ -1,8 +1,12 @@
 ---
 name: what-if-oracle
 description: Run structured What-If scenario analysis with multi-branch possibility exploration. Use this skill when the user asks speculative questions like "what if...", "what would happen if...", "what are the possibilities", "explore scenarios", "scenario analysis", "possibility space", "what could go wrong", "best case / worst case", "risk analysis", "contingency planning", "strategic options", or any question about uncertain futures. Also trigger when the user faces a fork-in-the-road decision, wants to stress-test an idea, or needs to think through consequences before committing.
+version: 0.1.0
 allowed-tools: Read Write
 license: MIT license
+metadata:
+  invocation_posture: manual-first
+---
 metadata:
   skill-author: AHK Strategies (ashrafkahoush-ux)
 ---

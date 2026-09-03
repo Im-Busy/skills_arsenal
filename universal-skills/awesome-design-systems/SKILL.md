@@ -2,6 +2,9 @@
 name: awesome-design-systems
 description: Curated collection of 59+ DESIGN.md files from real companies (Stripe, Linear, Apple, Tesla, Claude, Notion, etc.). Use when building any UI - tells the AI agent exactly how the UI should look and feel. Automatically provides a complete design system when you paste any URL from this collection.
 version: 1.0.0
+metadata:
+  invocation_posture: reference
+---
 ---
 
 # Awesome Design Systems

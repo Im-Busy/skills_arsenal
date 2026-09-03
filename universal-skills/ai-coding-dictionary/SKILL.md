@@ -1,8 +1,12 @@
 ---
 name: ai-coding-dictionary
 description: 62-term glossary of AI coding vocabulary by Matt Pocock. Use when encountering unfamiliar AI coding terminology, need to clarify agent/harness/tool concepts, or want precise language for AI tooling discussions. Activates on terms like "context window", "harness", "session", "tool call", "hallucination", "attention degradation", "handoff", "compaction", etc.
+version: 0.1.0
 allowed-tools: Read
 license: CC0 (public domain glossary adapted from dictionary-of-ai-coding)
+metadata:
+  invocation_posture: reference
+---
 metadata:
   source: https://github.com/mattpocock/dictionary-of-ai-coding
   author: Matt Pocock

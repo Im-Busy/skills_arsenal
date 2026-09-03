@@ -1,3 +1,13 @@
+---
+name: cpp-msys2
+description: C++ development instructions for Windows using MSYS2 and the MinGW-w64 toolchain. Use when the user requests C++ development, compilation, or when a project requires native C++ build tools on Windows.
+version: 0.1.0
+metadata:
+  invocation_posture: manual-first
+  platform: windows
+  toolchain: msys2
+---
+
 # C++ Development with MSYS2 on Windows
 
 ## Overview

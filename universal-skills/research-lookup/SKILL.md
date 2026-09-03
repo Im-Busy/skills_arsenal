@@ -1,8 +1,12 @@
 ---
 name: research-lookup
 description: Look up current research information using parallel-cli search (primary, fast web search), the Parallel Chat API (deep research), or Perplexity sonar-pro-search (academic paper searches). Automatically routes queries to the best backend. Use for finding papers, gathering research data, and verifying scientific information.
+version: 0.1.0
 allowed-tools: Read Write Edit Bash
 license: MIT license
+metadata:
+  invocation_posture: manual-first
+---
 compatibility: parallel-cli required (primary); PARALLEL_API_KEY and OPENROUTER_API_KEY optional for deep/academic backends
 metadata:
     skill-author: K-Dense Inc.

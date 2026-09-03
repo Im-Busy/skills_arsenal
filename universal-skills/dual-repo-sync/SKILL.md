@@ -1,8 +1,11 @@
 ---
 name: dual-repo-sync
 description: Manages a dual-remote Git architecture where a private development repo syncs curated (non-sensitive) files to a public-facing repo. Handles branch curation, .gitignore management, merge safety checks, and leak prevention for data/models/outputs/experiments/reports/notebooks/logs.
+version: 0.1.0
 license: MIT
 metadata:
+  invocation_posture: manual-first
+---
     skill-author: project
 ---
 
