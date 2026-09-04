@@ -6,6 +6,8 @@ author: CLI-Anything (Apache 2.0)
 source: https://github.com/CLI-Anything
 tags: [CLI, Python, Agent Tooling, Automation, Code Generation, Click]
 dependencies: [python>=3.10, click>=8.0, pytest]
+metadata:
+    invocation_posture: manual-first
 ---
 
 # CLI-Anything

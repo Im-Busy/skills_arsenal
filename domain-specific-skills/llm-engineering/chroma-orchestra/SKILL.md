@@ -1,11 +1,10 @@
 ---
-name: chroma
-description: Open-source embedding database for AI applications. Store embeddings and metadata, perform vector and full-text search, filter by metadata. Simple 4-function API. Scales from notebooks to production clusters. Use for semantic search, RAG applications, or document retrieval. Best for local development and open-source projects.
+name: chroma-orchestra
+description: Multi-agent orchestration harness built on top of Chroma vector database for RAG-powered multi-agent workflows. Coordinates researcher and synthesizer agents using Chroma-backed memory and semantic retrieval. Use when building RAG-augmented multi-agent systems, running research pipelines with shared vector context, or orchestrating document-understanding agents with shared embedding infrastructure.
 version: 1.0.0
-author: Orchestra Research
 license: MIT
-tags: [RAG, Chroma, Vector Database, Embeddings, Semantic Search, Open Source, Self-Hosted, Document Retrieval, Metadata Filtering]
-dependencies: [chromadb, sentence-transformers]
+metadata:
+    invocation_posture: hybrid
 ---
 
 # Chroma - Open-Source Embedding Database

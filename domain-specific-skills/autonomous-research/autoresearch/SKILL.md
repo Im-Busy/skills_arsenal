@@ -5,6 +5,8 @@ version: 1.0.0
 author: Orchestra Research
 license: MIT
 tags: [Autonomous Research, Two-Loop Architecture, Experiment Orchestration, Research Synthesis, Project Management]
+metadata:
+    invocation_posture: manual-first
 ---
 
 # Autoresearch

@@ -5,9 +5,10 @@ version: 1.0.0
 author: Orchestra Research
 license: MIT
 tags: [Autonomous Research, Two-Loop Architecture, Experiment Orchestration, Research Synthesis, Project Management]
+dependencies: [axolotl, torch, transformers, datasets, peft, accelerate, deepspeed]
+metadata:
+    invocation_posture: manual-first
 ---
-
-# Autoresearch
 
 Autonomous research orchestration for AI coding agents. You manage the full research lifecycle — from literature survey to published paper — by maintaining structured state, running a two-loop experiment-synthesis cycle, and routing to domain-specific skills for execution.
 

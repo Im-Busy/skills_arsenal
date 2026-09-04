@@ -6,6 +6,8 @@ author: Orchestra Research
 license: MIT
 tags: [Agents, CrewAI, Multi-Agent, Orchestration, Collaboration, Role-Based, Autonomous, Workflows, Memory, Production]
 dependencies: [crewai>=1.2.0, crewai-tools>=1.2.0]
+metadata:
+    invocation_posture: hybrid
 ---
 
 # CrewAI - Multi-Agent Orchestration Framework
