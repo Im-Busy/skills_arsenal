@@ -2,18 +2,20 @@
 
 ## What This Is
 
-A curated collection of **98 AI agent skills** — self-contained instruction modules that teach AI coding assistants how to use specific tools, frameworks, and methodologies. Organized into two categories: **universal skills** (broadly applicable) and **domain-specific skills** (organized by discipline).
+A curated collection of **108 AI agent skills** — self-contained instruction modules that teach AI coding assistants how to use specific tools, frameworks, and methodologies. Organized into two categories: **universal skills** (broadly applicable) and **domain-specific skills** (organized by discipline).
 
-**Updated 2026-07-04:** 49 universal + 49 domain-specific across 7 disciplines. 98 SKILL.md files total.
+**Updated 2026-09-09:** 59 universal + 49 domain-specific across 7 disciplines. 108 SKILL.md files total.
 
 ## Highlights
 
-### Universal Toolkit (48 skills)
+### Universal Toolkit (59 skills)
 
 Skills useful in virtually any agentic project:
 - **Development Lifecycle**: 23 agent-skills covering the full spec→plan→build→test→review→ship pipeline (Google engineering culture, Addy Osmani)
 - **Research & Ideation**: 5 structured brainstorming/ideation/critical-thinking frameworks
+- **Document Research**: Authoritative document discovery plus page-by-page investigation, four-lane external survey (papers + GitHub + guidelines + forums), quality scoring, cross-connection review, synthesis, mandatory visuals
 - **Cognitive Tools**: Multi-perspective deliberation (12 archetypes), scenario analysis, hypothesis generation, cognitive fingerprinting
+- **Metacognition**: Pre-delivery confidence scoring plus explicit knowledge-boundary and escalation decisions
 - **Knowledge Management**: Cross-referencing research against implementations, consulting-grade market reports
 - **Data Access**: Unified API access to 78+ public databases (scientific, biomedical, economic)
 - **Search Strategy**: Decision framework for 6 MCP search providers with fallback chains
@@ -22,11 +24,14 @@ Skills useful in virtually any agentic project:
 - **Git & Repo Management**: Dual-remote Git architecture setup, sync, and safe commit/push workflows
 - **Design Intelligence**: 161 reasoning rules, 67 UI styles, 161 palettes, 57 font pairings
 - **LLM Observability**: LangSmith trace/debug/evaluate/monitor integration
-- **Mermaid Authoring**: Definitive syntax rules validated against official parser tests — subgraphs, styling, breakers, GitHub rendering limitations
+- **Mermaid Tooling**: Syntax rules validated against official parser tests plus CLI rendering, export, share URLs, undo, and redo
+- **Writing Quality**: English prose cleanup, a default natural-first Chinese rewrite workflow, and a manual-only Chinese alternative
+- **Skill Publishing**: Packaging selection, device-path scrubbing, public generalization, and publish consent
+- **Token Efficiency**: Priority-ordered coordination for the 10-tool Token Saver Meta chain
 - **Agent Vocabulary**: 62-term AI coding dictionary — precise language for agents, harnesses, context, sessions, tools, failure modes, work patterns
 - **Skill Engineering**: Canonical-source architecture, per-IDE mirrors, dual .sh/.ps1 scripts, sync/bump automation, portable scripting — ship skills to 17+ AI coding platforms without drift
 
-### Domain Depth (35 skills, 7 disciplines)
+### Domain Depth (49 skills, 7 disciplines)
 
 - **Quantitative Finance**: Ticker screening pipeline, trading paper distillation, US Treasury API
 - **ML/Data Science**: Full lifecycle — classical ML, deep learning, Bayesian inference, survival analysis, interpretability, experiment tracking, zero-shot forecasting
@@ -36,16 +41,30 @@ Skills useful in virtually any agentic project:
 - **Scientific Computing**: Complex network/graph analysis toolkit
 - **Developer Tooling**: Auto-generate agent-friendly CLIs for any software + 40 community CLIs
 
-### New Additions (2026-05-16)
-- **23 agent-skills lifecycle skills** from Google engineering culture: spec→plan→build→test→review→ship pipeline
-- **1 CLI-Anything skill**: 7-phase CLI generation pipeline, 40+ community CLIs, CLI-Hub discovery
-- **1 AI Coding Dictionary**: 62-term glossary by Matt Pocock — models, sessions, tools, failure modes, handoffs, memory, work patterns
+### Recent Additions (2026-09-09)
+- **survey-external-options**: Four-lane external survey (papers, GitHub projects, engineering guidelines, forums) with extract-then-compare evaluation and a stop-before-clone rule. Returns a ranked comparison and a DEEPEN/BROADEN/PIVOT/CONCLUDE decision. Use when asking "should we redesign X?" or "what are the existing options for Y?" before committing to an approach.
+
+### Recent Additions (2026-07-24)
+- **skill-publishing-filter**: Packaging, device-specificity, generalization, and publish-consent gate for agent guidance
+- **stop-slop**: English anti-AI writing rules and delivery scan
+- **stop-slop-zh**: Manual-only Chinese rewrite alternative that preserves evidence, uncertainty, and register without fixed style quotas
+- **deslop-zh**: Default natural-first route for general Chinese rewrite, polishing, review, and de-slopping requests
+- **confidence-check**: 0-100 pre-delivery confidence rubric and assertion audit
+- **metamemory**: Knowledge-boundary tracking and escalation routing
+- **research-investigation**: Page-by-page document investigation, connection review, synthesis, and visual gates
+- **mermaid**: CLI-Anything project and render workflow for Mermaid source
+- **combo-workflow**: Portable coordination for the 10-tool Token Saver Meta chain
 
 ### Recent Additions (2026-06-02)
 - **1 directed-document-research**: 5-phase pipeline for web research → download → convert → filter → report. Searches authoritative sources, batch-downloads PDFs, converts to markdown, reviews for relevance, deletes irrelevant, and reports findings. Works for any domain.
 
 ### Past Additions (2026-05-24)
 - **1 multi-platform-skill-design**: 8-pattern architecture for cross-IDE compatibility from planning-with-files
+
+### Initial Additions (2026-05-16)
+- **23 agent-skills lifecycle skills** from Google engineering culture: spec→plan→build→test→review→ship pipeline
+- **1 CLI-Anything skill**: 7-phase CLI generation pipeline, 40+ community CLIs, CLI-Hub discovery
+- **1 AI Coding Dictionary**: 62-term glossary by Matt Pocock — models, sessions, tools, failure modes, handoffs, memory, work patterns
 
 ### External Skill Curation
 
@@ -64,10 +83,10 @@ Identified, evaluated, and curated the highest-value skills from:
 | Metric | Value |
 |--------|-------|
 | Total files | ~600+ |
-| SKILL.md instruction files | 97 |
+| SKILL.md instruction files | 108 |
 | Total size | ~11.5 MB |
-| Universal skills | 48 |
-| Domain-specific skills | 35 |
+| Universal skills | 59 |
+| Domain-specific skills | 49 |
 | Domain-specific disciplines | 7 |
 
 ## Organization Philosophy

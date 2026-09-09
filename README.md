@@ -1,8 +1,8 @@
 # Skills Arsenal
 
-Curated collection of **97 agent skills** organized into two categories: **universal** (broadly applicable to any agentic project) and **domain-specific** (organized by discipline). Sourced from project work, community skill repos, and global tooling.
+Curated collection of **108 agent skills** organized into two categories: **universal** (broadly applicable to any agentic project) and **domain-specific** (organized by discipline). Sourced from project work, community skill repos, and global tooling.
 
-**Updated 2026-06-02:** 48 universal, 49 domain-specific (7 disciplines), 97 SKILL.md files total. Cleaned local environment references from all skills.
+**Updated 2026-09-09:** 59 universal, 49 domain-specific (7 disciplines), 108 SKILL.md files total. Cleaned local environment references from all skills.
 
 ## Structure
 
@@ -33,14 +33,14 @@ skills_arsenal_for_publishing/
 | Domain-specific disciplines | 7 |
 | Domain-specific skills | 49 |
 
-## Universal Skills (48)
+## Universal Skills (59)
 
 Broadly useful across virtually any agentic project — development lifecycle, research, cognitive tools, memory, tooling, search, communication.
 
 | Category | Skills |
 |----------|--------|
 | Development Lifecycle | agent-skills-spec-driven-development, agent-skills-planning-and-task-breakdown, agent-skills-incremental-implementation, agent-skills-test-driven-development, agent-skills-code-review-and-quality, agent-skills-code-simplification, agent-skills-debugging-and-error-recovery, agent-skills-shipping-and-launch, agent-skills-security-and-hardening, agent-skills-performance-optimization, agent-skills-source-driven-development, agent-skills-doubt-driven-development, agent-skills-context-engineering, agent-skills-documentation-and-adrs, agent-skills-deprecation-and-migration, agent-skills-api-and-interface-design, agent-skills-browser-testing-with-devtools, agent-skills-ci-cd-and-automation, agent-skills-frontend-ui-engineering, agent-skills-git-workflow-and-versioning, agent-skills-idea-refine, agent-skills-interview-me, agent-skills-using-agent-skills |
-| Research & Ideation | brainstorming-research-ideas, creative-thinking-for-research, scientific-brainstorming, scientific-critical-thinking, research-lookup, directed-document-research |
+| Research & Ideation | brainstorming-research-ideas, creative-thinking-for-research, scientific-brainstorming, scientific-critical-thinking, research-lookup, research-investigation, directed-document-research, survey-external-options |
 | Cognitive Tools | consciousness-council, what-if-oracle, hypothesis-generation, dhdna-profiler |
 | Knowledge Management | knowledge-graph, market-research-reports |
 | Search & Data Access | database-lookup, mcp-search-strategy |
@@ -49,7 +49,7 @@ Broadly useful across virtually any agentic project — development lifecycle, r
 | Multi-Platform | multi-platform-skill-design |
 | Design & Observability | ui-ux-pro-max, awesome-design-systems, langsmith |
 
-## Domain-Specific Skills (35 in 7 disciplines)
+## Domain-Specific Skills (49 in 7 disciplines)
 
 | Discipline | Count | Highlights |
 |-----------|-------|------------|

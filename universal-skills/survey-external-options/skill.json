@@ -1,0 +1,14 @@
+{
+  "name": "survey-external-options",
+  "description": " Searches papers, existing GitHub projects, engineering guidelines, and forums (Stack Overflow and sibling sites, Discourse, Reddit, Hacker News), then evaluates each option and presents a ranked comparison. Hybrid invocation — activates on context match or when the LLM identifies relevance at any point. Use when the user asks to search for papers and existing projects and engineering guidelines and forums, survey how others solve a problem, find all options then compare, or evaluate approaches from literature plus GitHub plus practice. Do NOT use for cloning named GitHub URLs (use acquire-and-link-repos), page-by-page synthesis of already-held PDFs (use research-investigation), PDF-only gathering (use directed-document-research), search-tool routing alone (use mcp-search-strategy), or finding installable agent skills (use find-skills).",
+  "version": "0.1.1",
+  "license": "MIT",
+  "metadata": {
+    "skill-author": "workspace",
+    "invocation_posture": "hybrid"
+  },
+  "external_grounding": "cite-only",
+  "generated_by": "skill-json-gen.py",
+  "generated_at": "2026-09-09T04:49:42Z",
+  "source": "SKILL.md"
+}
