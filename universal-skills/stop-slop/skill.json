@@ -1,0 +1,24 @@
+{
+  "name": "stop-slop",
+  "version": "0.1.0",
+  "description": "Remove AI writing patterns from English prose. Auto-active — enforced on ALL English-language output from every model, every project, every platform. Eliminates: adverbs, passive voice, filler phrases, throat-clearing openers, binary contrasts, dramatic fragmentation, rhetorical setups, false agency, em dashes, Wh- sentence starters, lazy extremes, vague declaratives, meta-commentary. Enforces: active voice, specific subjects, varied rhythm, reader trust.",
+  "license": "MIT",
+  "invocation_posture": "auto-first",
+  "governance": {
+    "locked": [
+      "Cut filler phrases (adverbs, throat-clearing, business jargon)",
+      "Break formulaic structures (binary contrasts, dramatic fragmentation)",
+      "Active voice only — human subject doing something",
+      "Be specific — no vague declaratives or lazy extremes",
+      "Vary rhythm — no em dashes",
+      "Trust readers — skip softening, justification, meta-commentary",
+      "Cut quotables",
+      "Delivery check before any output"
+    ],
+    "improvable": [
+      "Phrase removal list (references/phrases.md)",
+      "Structural pattern list (references/structures.md)",
+      "Example transformations (references/examples.md)"
+    ]
+  }
+}

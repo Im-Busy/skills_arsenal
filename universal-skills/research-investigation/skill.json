@@ -1,0 +1,11 @@
+{
+  "name": "research-investigation",
+  "version": "0.1.0",
+  "description": "Systematically investigates research materials page-by-page, extracts structured insights, finds synergies between findings, and produces synthesis reports with mandatory visual diagrams. Hybrid invocation — activates on context match or when the LLM identifies relevance at any point. Use when the user asks to investigate documents, analyze papers page by page, extract insights, find connections between findings, or systematically study and synthesize information from documents. Do NOT use for finding documents, reading a single short document, general Q&A without document review, or code-only exploration without prose materials.",
+  "license": "MIT",
+  "invocation_posture": "hybrid",
+  "governance": {
+    "locked": [],
+    "improvable": []
+  }
+}

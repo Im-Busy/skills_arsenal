@@ -1,4 +1,4 @@
----
+﻿---
 name: mermaid-authoring
 description: MUST USE for ANY Mermaid diagram — flowcharts, architecture, sequences, class, state, ER, Gantt, pie, gitgraph. Covers syntax rules validated against official mermaid-js repo parser tests, GitHub rendering limitations, subgraph/styling gotchas, and exact syntax that breaks. Activates on: mermaid, flowchart, architecture diagram, graph TD/LR/TB, sequenceDiagram, classDiagram, stateDiagram, gantt, pie, gitGraph, subgraph, style directive, classDef, linkStyle.
 version: 1.0.0
@@ -348,3 +348,4 @@ When you encounter a Mermaid syntax question not covered here, clone the upstrea
 5. `packages/mermaid/src/docs/config/theming.md` — theme variables
 
 Also test on [mermaid.live](https://mermaid.live/) before committing to GitHub markdown.
+

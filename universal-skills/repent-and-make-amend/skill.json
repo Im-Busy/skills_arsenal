@@ -1,0 +1,14 @@
+{
+  "name": "repent-and-make-amend",
+  "description": " Detects, diagnoses, and remediates default-branch divergence in git repositories. Hybrid invocation — activates when the agent (a) creates a new branch without verifying the default, (b) leaves a branch ahead of the default with no PR, (c) discovers stray mirror/staging branches sitting atop the default, or when the user reports a \"I pushed to the wrong branch\" incident. Use when the agent identifies branch drift, when a mirror workflow spills into the working branch, or when a \"master\" or \"public\" sentinel branch appears in a main-default repo. Do NOT use for routine single-branch development, scheduled maintenance of healthy repos, or when the user explicitly asks for a general git hygiene sweep (use workspace-housekeeping instead).",
+  "version": "0.1.0",
+  "license": "MIT",
+  "metadata": {
+    "skill-author": "project",
+    "invocation_posture": "hybrid"
+  },
+  "external_grounding": "cite-only",
+  "generated_by": "skill-json-gen.py",
+  "generated_at": "2026-09-09T11:44:14Z",
+  "source": "SKILL.md"
+}

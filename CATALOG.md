@@ -1,6 +1,6 @@
 # Skills Catalog — Complete Index
 
-> 108 SKILL.md files across 2 categories: 59 universal + 49 domain-specific (7 disciplines).
+> 118 SKILL.md files across 2 categories: 69 universal + 49 domain-specific (7 disciplines).
 
 ---
 
@@ -54,12 +54,13 @@ Software engineering lifecycle skills encoding Google's engineering culture, by 
 |-------|-------------|
 | **skill-publishing-filter** | Chooses the lightest packaging form for agent guidance, blocks device-specific private state, generalizes public artifacts, and requires consent before public commits or pushes |
 
-### Git & Repo Management (2 — project-built)
+### Git & Repo Management (3 — project-built)
 
 | Skill | Description |
 |-------|-------------|
 | **dual-repo-setup** | Guides the agent to provision a dual-remote Git architecture for any project — private development repo (main/master) + curated public-facing mirror. Detects project structure, identifies private vs public files, creates whitelist, repo-syncer infrastructure, and gitignore exclusions |
 | **git-commit-push** | Safely commits and pushes current changes with dual-repo awareness. Auto-detects branch, stages files appropriately, commits with conventional message format, and pushes to the correct remote. Prevents pushing private branches to public remotes |
+| **repent-and-make-amend** | Detects, diagnoses, and remediates default-branch divergence in git repositories. Catches wrong-branch pushes, stray mirror staging branches, and naming collisions (master/main, public/content-label). Fires on branch drift, mirror workflow spillover, or user reports of "I pushed to the wrong branch." Produces a remediation checklist, written apology document, and proposed rule-gap closures |
 
 ### Document Research (3)
 

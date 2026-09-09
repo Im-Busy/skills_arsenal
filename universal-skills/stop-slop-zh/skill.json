@@ -1,0 +1,20 @@
+{
+  "name": "stop-slop-zh",
+  "version": "0.2.0",
+  "description": "Rewrites Chinese prose to reduce formulaic AI phrasing while preserving meaning, evidence, terminology, and the requested register. Manual-first invocation - use only when the user explicitly names or invokes stop-slop-zh. Do NOT use for ordinary Chinese output or general rewrite, polish, or de-slopping requests; route those requests to deslop-zh.",
+  "license": "MIT",
+  "invocation_posture": "manual-first",
+  "governance": {
+    "locked": [
+      "Explicit invocation is required",
+      "Facts, numbers, names, citations, and uncertainty must be preserved",
+      "Data, people, quotations, cases, and anecdotes must never be invented",
+      "No mandatory punctuation bans, phrase counts, colloquialisms, or document structures"
+    ],
+    "improvable": [
+      "Context-sensitive examples of formulaic phrasing",
+      "Register-specific rewrite guidance",
+      "Meaning-preservation checks"
+    ]
+  }
+}

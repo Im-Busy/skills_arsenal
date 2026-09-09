@@ -1,0 +1,29 @@
+{
+  "name": "mermaid",
+  "version": "0.1.0",
+  "description": "Create and render Mermaid diagrams via CLI using the CLI-Anything mermaid harness. Supports flowcharts, sequence diagrams, class diagrams, state diagrams, ER diagrams, Gantt charts. Renders via mermaid.ink cloud service. Hybrid invocation. Use when creating text-based diagrams; when the user asks to visualize as mermaid. Do NOT use for Draw.io diagrams or pixel-based images.",
+  "license": "MIT",
+  "invocation_posture": "hybrid",
+  "governance": {
+    "locked": [
+      "Harness location: MERMAID_HARNESS or repository-relative mermaid/agent-harness/",
+      "CLI command: cli-anything-mermaid",
+      "Command groups: project, diagram, export, session",
+      "Agent rules (--json flag, return codes, absolute paths, verify outputs)"
+    ],
+    "improvable": [
+      "Example workflows",
+      "Diagram type reference"
+    ]
+  },
+  "triggers": [
+    "/mermaid",
+    "mermaid diagram",
+    "text-based diagram",
+    "sequence diagram",
+    "class diagram",
+    "state diagram",
+    "flowchart diagram",
+    "mermaid.ink"
+  ]
+}

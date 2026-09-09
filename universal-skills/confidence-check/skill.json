@@ -1,0 +1,11 @@
+{
+  "name": "confidence-check",
+  "version": "1.0.0",
+  "description": "Teaches agents metacognitive self-evaluation before delivering output. Score confidence 0-100 using structured rubric, audit output for hedging phrases and unsupported assertions, detect self-contradictions, and flag uncertainty with verification steps. Activates before complex responses, in high-consequence domains, or when delivering uncertain output. Do NOT use for trivial yes/no answers, factual lookups with direct evidence, or routine single-step operations.",
+  "license": "MIT",
+  "invocation_posture": "hybrid",
+  "governance": {
+    "locked": [],
+    "improvable": []
+  }
+}

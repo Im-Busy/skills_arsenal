@@ -1,0 +1,20 @@
+{
+  "name": "skill-publishing-filter",
+  "version": "0.1.0",
+  "description": "Meta-skill that decides how to package agent knowledge and whether a skill is safe to publish. Hybrid invocation — activates on context match or when the LLM identifies relevance at any point. Use when creating or modifying a skill, generalizing device-specific instructions, preparing a skill for a public collection, or choosing skill vs AGENTS.md vs MCP vs existing skill. Do NOT use for ordinary application code changes unrelated to agent skills.",
+  "license": "MIT",
+  "invocation_posture": "hybrid",
+  "governance": {
+    "locked": [
+      "Choose lightest packaging form first",
+      "Never publish device-specific private machine state",
+      "Generalize before public arsenal staging",
+      "Ask user before commit/push to public arsenal"
+    ],
+    "improvable": [
+      "Public collection path conventions",
+      "Checklist templates",
+      "Automated path-sanitizer script"
+    ]
+  }
+}

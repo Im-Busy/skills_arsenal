@@ -1,0 +1,11 @@
+{
+  "name": "combo-workflow",
+  "version": "1.0.0",
+  "description": "Master skill integrating 10 Token Saver Meta tools (codesight, GitNexus, CGC, RTK, Repomix, caveman, LG-token-saver, kevin-copilot, ContextSlimAI, Token Saver Meta) into a priority-ordered workflow with synergy chains and anti-pattern detection for minimizing token usage across all agent platforms. Activates when configuring token-saving tool chains or optimizing agent context efficiency. Do NOT use for single-tool operations, general code editing, or tasks that don't involve token optimization.",
+  "license": "MIT",
+  "invocation_posture": "hybrid",
+  "governance": {
+    "locked": [],
+    "improvable": []
+  }
+}

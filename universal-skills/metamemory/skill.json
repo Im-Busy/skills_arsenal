@@ -1,0 +1,11 @@
+{
+  "name": "metamemory",
+  "version": "0.1.0",
+  "description": "Teaches agents metacognitive patterns: confidence self-check before responding, tracking knowledge boundaries, and escalation triggers. Based on NOVA's confidence-check and self-awareness metacognition plugins. Hybrid invocation — activates before delivering complex responses, when uncertainty is high, or when the agent needs to verify its own output. Do NOT use for trivial yes/no answers or factual lookups with direct evidence.",
+  "license": "MIT",
+  "invocation_posture": "hybrid",
+  "governance": {
+    "locked": [],
+    "improvable": ["confidence_checklist", "knowledge_boundaries", "escalation_triggers"]
+  }
+}
